@@ -35,12 +35,6 @@ app.use(express.json());
 app.use(
   morgan(':method :url :status :res[content-length] - :response-time ms')
 );
-app.use(
-  '/api/persons',
-  morgan(':body', {
-    skip: (req) => req.method !== 'POST',
-  })
-);
 
 app.get('/', function (req, res) {
   res.send('hello, world!');
@@ -111,7 +105,7 @@ app.post('/api/persons', morgan(':body'), (request, response) => {
 
   persons = persons.concat(person);
 
-  response.json(person);
+  response.status(201).json(person);
 });
 
 const PORT = 3001;

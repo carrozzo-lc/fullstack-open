@@ -1,6 +1,6 @@
 # Fullstack Open – Submission repo
 
-This repository contains my deliverables for the [University of Helsinki Fullstack Open](https://fullstackopen.com/en/) course up to the end of **Part 2 (Communicating with server)**. It is intended for reviewer access and focuses on the React applications and supporting material required for grading Part 2. Part 3 work will be added later; placeholder folders remain so the overall structure matches the course.
+This repository tracks my journey through the [University of Helsinki Fullstack Open](https://fullstackopen.com/en/) course as I build fullstack skills across modern JavaScript, React, and Node.js. It collects the exercises, reference projects, and supporting material I use while learning to design, implement, and deploy fullstack applications.
 
 ## Completed Scope
 

@@ -31,6 +31,9 @@ app.get('/api/persons', (request, response, next) => {
 app.get('/api/persons/:id', (request, response, next) => {
   Person.findById(request.params.id)
     .then((person) => {
+      if (!person) {
+        return response.status(404).end();
+      }
       response.json(person);
     })
     .catch((error) => next(error));
@@ -94,6 +97,19 @@ app.put('/api/persons/:id', (request, response, next) => {
       return person.save().then((updatedPerson) => {
         response.json(updatedPerson);
       });
+    })
+    .catch((error) => next(error));
+});
+
+app.get('/info', (request, response) => {
+  Person.find({})
+    .then((persons) => {
+      const info = `
+    Phonebook has info for ${persons.length} people <br>
+    ${new Date()}
+  `;
+      response.type('text/html');
+      response.send(info);
     })
     .catch((error) => next(error));
 });

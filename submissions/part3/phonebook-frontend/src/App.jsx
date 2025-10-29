@@ -63,20 +63,37 @@ const App = () => {
             setTimeout(() => {
               setNotification({ mode: null, message: null });
             }, 2000);
+          })
+          .catch((error) => {
+            setNotification({
+              mode: 'error',
+              message: error.response.data.error,
+            });
+            setTimeout(() => {
+              setNotification({ mode: null, message: null });
+            }, 2000);
           });
       }
       return;
     }
 
-    personService.create(personObject).then((returnedPerson) => {
-      setNotification({ mode: 'success', message: 'Person added!' });
-      setPersons((prev) => prev.concat(returnedPerson));
-      setNewName('');
-      setNewNumber('');
-      setTimeout(() => {
-        setNotification({ mode: null, message: null });
-      }, 2000);
-    });
+    personService
+      .create(personObject)
+      .then((returnedPerson) => {
+        setNotification({ mode: 'success', message: 'Person added!' });
+        setPersons((prev) => prev.concat(returnedPerson));
+        setNewName('');
+        setNewNumber('');
+        setTimeout(() => {
+          setNotification({ mode: null, message: null });
+        }, 2000);
+      })
+      .catch((error) => {
+        setNotification({ mode: 'error', message: error.response.data.error });
+        setTimeout(() => {
+          setNotification({ mode: null, message: null });
+        }, 2000);
+      });
   };
 
   const handleDeletePerson = (id, name) => {

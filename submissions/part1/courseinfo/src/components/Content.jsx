@@ -1,7 +1,7 @@
-const Part = ({ title, exercises }) => {
+const Part = ({ name, exercises }) => {
   return (
     <p>
-      {title} {exercises}
+      {name} {exercises}
     </p>
   )
 }
@@ -10,7 +10,7 @@ const Content = ({ parts }) => {
   return (
     <div>
       {parts.map((part) => (
-        <Part key={part.title} title={part.title} exercises={part.exercises} />
+        <Part key={part.name} name={part.name} exercises={part.exercises} />
       ))}
     </div>
   )

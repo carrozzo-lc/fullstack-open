@@ -6,15 +6,18 @@ This repository tracks my journey through the [University of Helsinki Fullstack 
 
 - ✅ Part 1 – Exercises submitted through the course portal (not mirrored here yet).
 - ✅ Part 2 – Countries and Phonebook React applications (sources included below).
-- ⏳ Part 3 – Backend deployment exercises pending.
+- ✅ Part 3 – Backend deployment and the production-ready Phonebook backend.
+- 🚧 Part 4 – Currently working on integration tests, blog list APIs, and token-based authentication.
 
 ## Repository Layout
 
+- `submissions/part1` – Vite + React implementations for anecdotes, unicafe, and other Part 1 exercises.
 - `submissions/part2/countries` – Country lookup app implementing data fetching, conditional rendering, and API integration required for Part 2 exercises 2.12–2.14.
 - `submissions/part2/phonebook` – CRUD phonebook demonstrating controlled forms, filtering, optimistic updates, and error notifications for exercises 2.6–2.18.
-- `lessons/notes` – Notes app from the course material used as a personal reference while studying Part 2.
-- `lessons/backend` – Express playground prepared for Part 3; not part of this submission but included for context.
-- `submissions/part1` / `submissions/part3` – Empty placeholders to keep the repository aligned with the course structure.
+- `submissions/part3/phonebook-backend` – Node + Express + MongoDB backend that powers the production Phonebook application, including deployment assets.
+- `submissions/part3/phonebook-frontend` – Frontend adjusted for the real backend and Render deployment tasks in Part 3.
+- `lessons/notes` – Notes app from the course material used as a personal reference while studying Part 2 and 3 concepts.
+- `lessons/backend` – Express playground prepared for experimentation alongside the official exercises.
 
 ## How to Evaluate the Part 2 Apps
 
@@ -43,8 +46,8 @@ Both projects use Vite + React 19, Axios for HTTP requests, and ESLint configura
 
 ## Next Steps (Beyond This Submission)
 
-- Export Part 1 exercise source locally for completeness.
-- Implement the Part 3 backend, replace JSON Server in the phonebook app, and document deployment.
-- Introduce automated tests (Vitest / React Testing Library) once covered in later course sections.
+- Polish documentation for the completed Part 3 deployments and link to the live apps.
+- Finish the Part 4 blog list backend: tests with Vitest + Supertest, token auth, and helper utilities.
+- Start preparing for state management topics coming in Part 5 by extracting reusable hooks/components.
 
 Thank you for reviewing the Part 2 work!

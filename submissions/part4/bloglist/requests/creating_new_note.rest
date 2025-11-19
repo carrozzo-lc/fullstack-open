@@ -1,0 +1,9 @@
+POST http://localhost:3001/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Post due",
+  "author": "Luca Carrozzo",
+  "url": "post-due",
+  "likes": 87
+}
